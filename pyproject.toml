@@ -4,12 +4,12 @@ build-backend = "maturin"
 
 [project]
 name = "uroman-fast"
-version = "0.1.0"
+version = "0.1.0b"
 description = "Fast Python wrapper for uroman-rs universal romanizer"
 readme = "README.md"
 requires-python = ">=3.8"
 license = { text = "MIT" }
-authors = [{ name = "Your Name", email = "your.email@example.com" }]
+authors = [{ name = "Biswajit Satapathy", email = "biswajit2902@example.com" }]
 keywords = ["romanization", "transliteration", "unicode", "nlp", "uroman"]
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -25,6 +25,6 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/YOUR_USERNAME/uroman-fast"
-Repository = "https://github.com/YOUR_USERNAME/uroman-fast"
-Documentation = "https://github.com/YOUR_USERNAME/uroman-fast#readme"
+Homepage = "https://github.com/Biswajit2902/uroman-fast"
+Repository = "https://github.com/Biswajit2902/uroman-fast"
+Documentation = "https://github.com/Biswajit2902/uroman-fast#readme"
