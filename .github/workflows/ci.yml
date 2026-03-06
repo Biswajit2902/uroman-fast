@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build and install
+        run: |
+          pip install maturin
+          maturin build --release
+
+      - name: Install and test
+        run: |
+          pip install uroman-fast --no-index --find-links target/wheels --force-reinstall
+          python -c "from uroman_fast import romanize; r=romanize('こんにちは'); assert isinstance(r, str) and len(r) > 0"
