@@ -40,7 +40,7 @@ jobs:
         with:
           target: ${{ matrix.target }}
           manylinux: ${{ matrix.manylinux }}
-          args: --release --out dist --sdist --compatibility pypi
+          args: --release --out dist --sdist --compatibility pypi -i 3.8 -i 3.9 -i 3.10 -i 3.11 -i 3.12
 
       - name: Upload wheels
         uses: actions/upload-artifact@v4
