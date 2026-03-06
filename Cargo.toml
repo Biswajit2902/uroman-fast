@@ -1,0 +1,19 @@
+[package]
+name = "uroman-fast"
+version = "0.1.0"
+edition = "2021"
+description = "Fast Python wrapper for uroman-rs universal romanizer"
+license = "MIT"
+repository = "https://github.com/YOUR_USERNAME/uroman-fast"
+homepage = "https://github.com/YOUR_USERNAME/uroman-fast"
+documentation = "https://github.com/YOUR_USERNAME/uroman-fast#readme"
+keywords = ["romanization", "transliteration", "unicode", "nlp"]
+categories = ["text-processing"]
+
+[lib]
+name = "uroman_fast"
+crate-type = ["cdylib"]
+
+[dependencies]
+uroman = { version = "0.6", default-features = false }
+pyo3 = { version = "0.22", features = ["extension-module"] }
